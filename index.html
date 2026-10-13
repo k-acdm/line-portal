@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LINE送信系アプリ ／ 春日部アカデミー</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Yu Gothic", sans-serif;
+    margin: 0;
+    padding: 24px 16px 48px;
+    background: #f5f5f5;
+    color: #333;
+  }
+  .wrap { max-width: 560px; margin: 0 auto; }
+  h1 { font-size: 24px; margin: 0 0 4px; color: #2c3e50; }
+  .subtitle { font-size: 14px; color: #7f8c8d; margin: 0 0 28px; }
+  .section-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #7f8c8d;
+    letter-spacing: .04em;
+    margin: 0 0 10px;
+  }
+  .group { margin-bottom: 28px; }
+
+  .app-link {
+    display: block;
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    border-left: 4px solid #3498db;
+    text-decoration: none;
+    color: #2c3e50;
+    transition: box-shadow .15s ease, transform .15s ease;
+  }
+  .app-link:hover {
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+    transform: translateY(-1px);
+  }
+  .app-name { font-size: 16px; font-weight: 700; }
+  .app-use { font-size: 13px; color: #7f8c8d; margin-top: 3px; }
+
+  /* データ入力系（recipients-admin）は配信ツールと区別して色・配置を分ける */
+  .group-data .app-link { border-left-color: #16a085; }
+  .group-data .app-link:hover { box-shadow: 0 3px 12px rgba(22,160,133,0.18); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>LINE送信系アプリ</h1>
+    <p class="subtitle">春日部アカデミー</p>
+
+    <!-- 配信ツール -->
+    <div class="group">
+      <p class="section-label">配信ツール</p>
+
+      <!-- アプリ追加はこの <a class="app-link"> ブロックを複製して1つ足すだけ -->
+      <a class="app-link" href="https://script.google.com/macros/s/AKfycbyWqIdWCDoj9QY0FDtX5YaiuhSKyf57NyEpmranwzOhAww73bk4VDs6RF2IukFpDw7k/exec" target="_blank" rel="noopener">
+        <div class="app-name">billing-line</div>
+        <div class="app-use">引き落とし通知</div>
+      </a>
+
+      <a class="app-link" href="https://script.google.com/macros/s/AKfycbzuXPsTrhAXqVlN8zst5mRFNOM45Em81tCDFdhnuqiPpyZRuhaX3pBRLwl_n-80zo4Y/exec" target="_blank" rel="noopener">
+        <div class="app-name">schedule-line</div>
+        <div class="app-use">授業日程表配信</div>
+      </a>
+
+      <a class="app-link" href="https://script.google.com/macros/s/AKfycbxFbQD_x3V5SKRZhY4OC_8jCa3i4vbGYdXgWHYHFk_ekj_DX34OVHMTCi_digkF8V8/exec" target="_blank" rel="noopener">
+        <div class="app-name">proposal-line</div>
+        <div class="app-use">授業内容提案書配信</div>
+      </a>
+    </div>
+
+    <!-- データ入力（配信ツールではない） -->
+    <div class="group group-data">
+      <p class="section-label">データ入力</p>
+
+      <a class="app-link" href="https://script.google.com/macros/s/AKfycbydcwnb0vuTySB6-oyCinL7zO-7bNsHEuCRQkSihouY9UTxX9fjeeHOmvMllCWQovzj/exec" target="_blank" rel="noopener">
+        <div class="app-name">recipients-admin</div>
+        <div class="app-use">送信先データ入力</div>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
